@@ -21,7 +21,7 @@ while i < 101
 	sex = data[#{i}][9]
 	CauseOfDeath = data[#{i}][10]
 	Year = data[#{i}][7]
-	connection.exec “INSERT INTO DeathCause VALUES('#{i}','#{Ethnicity}','#{sex}','#{CauseOfDeath}','#{Year}’)”
+	connection.exec "INSERT INTO DeathCause VALUES('#{i}','#{Ethnicity}','#{sex}','#{CauseOfDeath}','#{Year}’)"
 	i = i + 1
 end
 
