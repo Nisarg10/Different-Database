@@ -12,10 +12,10 @@ i = 1
 while i < 101 
 	a = connection[:heroku_hfts48pr].insert_one({
 		id: "#{i}",
-		ethnicity: data[i][8],
-		sex: data[i][9],
-		causeOfDeath: data[i][10],
-		year: data[i][7]
+		ethnicity: data["#{i}"][8],
+		sex: data["#{i}"[9],
+		causeOfDeath: data["#{i}"][10],
+		year: data["#{i}"][7]
 	})
 	i+=1
 end
