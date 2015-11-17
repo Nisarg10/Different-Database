@@ -9,12 +9,13 @@ connection = Redis.new(:host => "ec2-54-83-9-36.compute-1.amazonaws.com", :port 
 i = 1
 
 while i < 101
-	redis.hset "row#{i}","id",i
-	redis.hset "row#{i}","Ethnicity", data[i][8]
-	redis.hset "row#{i}","sex", data[i][9]
-	redis.hset "row#{i}","CauseOfDeath", data[i][10]
-	redis.hset "row#{i}","year", data[i][7]
-	puts redis.hgetall "row#{i}"
+
+	Redis.hset "row#{i}","id",i
+	Redis.hset "row#{i}","Ethnicity", data[i][8]
+	Redis.hset "row#{i}","sex", data[i][9]
+	Redis.hset "row#{i}","CauseOfDeath", data[i][10]
+	Redis.hset "row#{i}","year", data[i][7]
+	puts Redis.hgetall "row#{i}"
 	i += 1
 end
 
