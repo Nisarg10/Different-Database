@@ -5,7 +5,7 @@ require 'open-uri'
 
 data = JSON.parse(open("https://data.cityofnewyork.us/api/views/jb7j-dtam/rows.json?accessType=DOWNLOAD").read)
 
-connection = PG.connect  :dbname => "dnq31r5ahvg4b",
+connection = PG.connect  :dbname => "dfm1q8av5dgnd5",
 			  :user => "dckxytovmhkaqf",
                          :password => "TCiCqyCh-WqUb1FDNEmFACeM7h",
                          :host => "ec2-54-204-25-54.compute-1.amazonaws.com"
