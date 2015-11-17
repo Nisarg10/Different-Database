@@ -1,14 +1,14 @@
 
+require 'pg'
 require 'json'
 require 'open-uri'
-require 'pg'
 
 data = JSON.parse(open("https://data.cityofnewyork.us/api/views/jb7j-dtam/rows.json?accessType=DOWNLOAD").read)
 
-connection = PG.connect(:username => "uqleijmlnbbuci",
-                         :password => "yXmeuqi9UiXZQLGSLX2douhddp",
-                         :database => "dnq31r5ahvg4b",
-                         :host => "ec2-107-21-223-110.compute-1.amazonaws.com")
+connection = PG.connect  :dbname => "dnq31r5ahvg4b",
+			  :username => "dckxytovmhkaqf",
+                         :password => "TCiCqyCh-WqUb1FDNEmFACeM7h",
+                         :host => "ec2-54-204-25-54.compute-1.amazonaws.com"
 
 connection.exec("CREATE TABLE DeathCause(id INTEGER PRIMARY KEY, Ethnicity TEXT, sex Text, CauseOfDeath TEXT, Year INTEGER)")
 
