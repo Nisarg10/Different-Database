@@ -10,7 +10,7 @@ connection = Mongo::Client.new(['ds047712.mongolab.com:47712/heroku_hfts48pr'], 
 i = 1
 
 while i < 101 
-	a = connection[:heroku_hfts48pr].insert_one({
+	a = connection[:DeathCause].insert_one({
 		id: "#{i}",
 		ethnicity: data["#{i}"][8],
 		sex: data["#{i}"[9],
