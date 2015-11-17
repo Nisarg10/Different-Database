@@ -15,11 +15,11 @@ connection.exec("CREATE TABLE DeathCause(id INTEGER PRIMARY KEY, Ethnicity TEXT,
 i = 1
 
 while i < 101 
-	Ethnicity = data[$i][8]
-	sex = data[$i][9]
-	CauseOfDeath = data[$i][10]
-	Year = data[$i][7]
-	query = "insert into DeathCause VALUES(‘#{$i}’,’#{$Ethnicity}’,’#{$sex}’,’#{$CauseOfDeath}’,’#{$Year}’)”	 	
+	Ethnicity = data[i][8]
+	sex = data[i][9]
+	CauseOfDeath = data[i][10]
+	Year = data[i][7]
+	query = "insert into DeathCause VALUES(#{i},’#{Ethnicity}’,’#{sex}’,’#{CauseOfDeath}’,#{Year})”	 	
 	connection.exec(query)
 	i+=1
 end
