@@ -1,9 +1,9 @@
 require 'pg'
 
-connection = PG.connect(:username => "uqleijmlnbbuci",
-                         :password => "yXmeuqi9UiXZQLGSLX2douhddp",
-                         :database => "dnq31r5ahvg4b",
-                         :host => "ec2-107-21-223-110.compute-1.amazonaws.com")
+connection = PG.connect  :dbname => "dfm1q8av5dgnd5",
+			  :user => "dckxytovmhkaqf",
+                         :password => "TCiCqyCh-WqUb1FDNEmFACeM7h",
+                         :host => "ec2-54-204-25-54.compute-1.amazonaws.com"
 
 puts "Enter a id from 1 to 100."
 id = gets.chomp
