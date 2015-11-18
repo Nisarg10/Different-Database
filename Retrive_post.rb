@@ -13,11 +13,11 @@ result = connection.exec("select * from DeathCause where id='#{id}'")
 a = {}
 
 result.each do |data|
-	a["id"] = data['id']
-	a["Ethnicity"] = data['Ethnicity']
-	a["sex"] = data['sex']
-	a["CauseOfDeath"] = data['CauseOfDeath']
-	a["Year"] = data['Year']
+	a["id"] = data[0]
+	a["Ethnicity"] = data[1]
+	a["sex"] = data[2]
+	a["CauseOfDeath"] = data[3]
+	a["Year"] = data[4]
 end
 
 puts a
