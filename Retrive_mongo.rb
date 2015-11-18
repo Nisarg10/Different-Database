@@ -1,7 +1,7 @@
 require "mongo"
 include Mongo
 
-connection = Mongo::Client.new(['ds049854.mongolab.com:49854'], :database => 'heroku_hfts48pr', :user => 'nsd6275', :password => 'nsd6275')
+connection = Mongo::Client.new(['ds047712.mongolab.com:47712/heroku_hfts48pr'], :database => 'heroku_hfts48pr', :user => 'nsd6275', :password => 'nsd6275')
 
 puts "Enter the id between 1 t 100"
 id=gets.chomp
