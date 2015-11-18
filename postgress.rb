@@ -17,10 +17,10 @@ connection.exec "CREATE TABLE DeathCause(id INTEGER PRIMARY KEY, Ethnicity TEXT,
 i = 1
 
 while i < 101 
-	Ethnicity = data["data"][i][8]
-	sex = data["data"][i][9]
-	CauseOfDeath = data["data"][i][10]
-	Year = data["data"][i][7]
+	Ethnicity = data["data"][i][9]
+	sex = data["data"][i][10]
+	CauseOfDeath = data["data"][i][11]
+	Year = data["data"][i][8]
 	connection.exec "INSERT INTO DeathCause VALUES('#{i}','#{Ethnicity}','#{sex}','#{CauseOfDeath}','#{Year}')"
 	i = i + 1
 end
