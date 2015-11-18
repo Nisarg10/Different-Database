@@ -14,7 +14,7 @@ i = 1
 j = 1
 while i < 101
 	a = connection.hget "row#{i}", "Year"
-	if a == y and j < 11
+	if a == y
 		puts connection.hgetall "row#{i}"
 		j += 1
 	end
