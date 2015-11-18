@@ -15,12 +15,8 @@ In this project there are four scripts written in ruby language.
 
 
 
-
-
-
 1. What is your external data source used to populate your Heroku data sources?
         
-
 
 
       I have used data of New York City Leading Causes of Death from http://catalog.data.gov/dataset/new-york-city-leading-causes-of-death-ce97f. From this I have used following columns.
@@ -29,6 +25,7 @@ In this project there are four scripts written in ruby language.
             - Cause Of Death
             - Year
             - id (This one is not used from data, I manually created the unique id for each recoed.)
+           
     
 2. What are the Heroku toolbelt commands to execute the scripts?
 
