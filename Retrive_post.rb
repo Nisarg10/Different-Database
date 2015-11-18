@@ -8,7 +8,7 @@ connection = PG.connect  :dbname => "dfm1q8av5dgnd5",
 puts "Enter a id from 1 to 100."
 id = gets.chomp
 
-result = connection.exec("select * from DeathCause where id=#{id}")
+result = connection.exec("select * from DeathCause where id='#{id}'")
 
 a = {}
 
@@ -26,7 +26,7 @@ puts "Enter the year"
 y = gets.chomp 
 i = 1
 
-result1 = connection.exec("select * from DeathCause where Year=#{y}")
+result1 = connection.exec("select * from DeathCause where Year='#{y}'")
 
 result1.each do |data1|
 	if i < 11
