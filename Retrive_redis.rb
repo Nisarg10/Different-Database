@@ -13,10 +13,12 @@ y = gets.chomp
 i = 1
 j = 1
 while i < 101
-	a = connection.hget "row#{i}", "Year"
+	a = connection.hget "row#{i}", "year"
 	if a == y
-		puts connection.hgetall "row#{i}"
-		j += 1
+		if j < 11
+			puts connection.hgetall "row#{i}"
+			j += 1
+		end
 	end
 	i += 1
 end
