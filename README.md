@@ -22,6 +22,7 @@ In this project there are four scripts written in ruby language.
         
 
 
+
       I have used data of New York City Leading Causes of Death from http://catalog.data.gov/dataset/new-york-city-leading-causes-of-death-ce97f. From this I have used following columns.
             - Ethnicity
             - Sex
