@@ -5,7 +5,7 @@ connection = Redis.new(:host => "ec2-107-21-120-49.compute-1.amazonaws.com", :po
 puts "Enter id between 1 to 100 you want to retrieve.."
 id=gets.chomp
 
-puts redis.hgetall "row#{id}"
+puts connection.hgetall "row#{id}"
 
 puts "Enter the year"
 y = gets.chomp
@@ -13,9 +13,9 @@ y = gets.chomp
 i = 1
 j = 1
 while i < 101
-	a = redis.hget "row#{i}", "Year"
-	if a == y & j < 11
-		puts redis.hgetall "row#{i}"
+	a = connection.hget "row#{i}", "Year"
+	if a == y and j < 11
+		puts connection.hgetall "row#{i}"
 		j += 1
 	end
 	i += 1
