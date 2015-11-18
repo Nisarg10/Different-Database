@@ -10,12 +10,12 @@ i = 1
 
 while i < 101
 
-	redis.hset "row#{i}","id",i
-	redis.hset "row#{i}","Ethnicity", data["data"][i][9]
-	redis.hset "row#{i}","sex", data["data"][i][10]
-	redis.hset "row#{i}","CauseOfDeath", data["data"][i][11]
-	redis.hset "row#{i}","year", data["data"][i][8]
-	puts redis.hgetall "row#{i}"
+	connection.hset "row#{i}","id",i
+	connection.hset "row#{i}","Ethnicity", data["data"][i][9]
+	connection.hset "row#{i}","sex", data["data"][i][10]
+	connection.hset "row#{i}","CauseOfDeath", data["data"][i][11]
+	connection.hset "row#{i}","year", data["data"][i][8]
+	puts connection.hgetall "row#{i}"
 	i += 1
 end
 
