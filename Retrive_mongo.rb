@@ -6,11 +6,11 @@ connection = Mongo::Client.new(['ds049854.mongolab.com:49854'], :database => 'he
 puts "Enter the id between 1 t 100"
 id=gets.chomp
 
-db[:DeathCause].find('id' => id).each {|data| 
+connection[:DeathCause].find('id' => id).each {|data| 
 puts data }
 
 puts "Enter the year"
 y = gets.chomp 
 
-db[:DeathCause].find('year' => y).each {|data1|
+connection[:DeathCause].find('year' => y).each {|data1|
 puts data1 }
