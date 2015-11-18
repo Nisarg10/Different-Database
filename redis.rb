@@ -4,7 +4,7 @@ require 'redis'
 
 data = JSON.parse(open("https://data.cityofnewyork.us/api/views/jb7j-dtam/rows.json?accessType=DOWNLOAD").read)
 
-connection = Redis.new(:host => "ec2-54-83-9-36.compute-1.amazonaws.com", :port => 7369, :url => "redis://h:pcucqtm555pilc58fo5s91vojp1@ec2-54-83-9-36.compute-1.amazonaws.com:7369", :password => "pcucqtm555pilc58fo5s91vojp1")
+connection = Redis.new(:host => "ec2-107-21-120-49.compute-1.amazonaws.com", :port => 17879, :url => "redis://h:p61crvnv1vies83ig83ludr5bnv@ec2-107-21-120-49.compute-1.amazonaws.com:17879", :password => "p61crvnv1vies83ig83ludr5bnv")
 
 i = 1
 
